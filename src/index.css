@@ -26,6 +26,7 @@ a:hover {
 }
 
 body {
+  background-color: #242424;
   margin: 0;
   display: grid;
   place-items: center;
@@ -45,7 +46,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #454755;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -60,13 +61,13 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #3a41a5;
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #455363;
   }
 }
 

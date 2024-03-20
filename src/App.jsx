@@ -17,26 +17,34 @@ function App() {
     if (enabled){
       window.addEventListener('pointermove', handleMove)
     }
+    //cleanup
+    //cuando el componente se desmonta
+    //cuando cambian las dependencias, antes de ejecutar
+    //el efecto de nuevo
 
-
+    return ()=>{
+      window.removeEventListener('pointermove',handleMove)
+    }
   }, [enabled])
+  
   return (
     <main>
       <div style={{
         position:'absolute',
         backgroundColor:'#09f',
-        boderRadius: '50%',
+        borderRadius: '50%',
         opacity: 0.8,
         pointerEvents: 'none',
-        left: -20,
-        top: -20,
-        width: 40,
-        height: 40,
+        left: -10,
+        top: -10,
+        width: 20,
+        height: 20,
         transform: `translate(${position.x}px, ${position.y}px)`
-      }}/>
-    <button onClick={() =>setEnabled(!enabled)}>
+      }}></div>
+      <button onClick={() =>setEnabled(!enabled)}>
       {enabled ? 'Desactivar' : 'Activar'} seguir puntero
-    </button>
+      </button>
+    
     
     </main>
   )
